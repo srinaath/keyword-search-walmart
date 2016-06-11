@@ -1,0 +1,30 @@
+{
+  "name": "keyword-item-finder",
+  "version": "1.0.0",
+  "description": "Searches item id's in walmart api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hapi",
+    "walmart",
+    "api",
+    "Request",
+    "Async"
+  ],
+  "author": "srinaath",
+  "license": "ISC",
+  "dependencies": {
+    "boom": "^3.2.1",
+    "fs": "0.0.2",
+    "handlebars": "^4.0.5",
+    "hapi": "^13.4.1",
+    "hoek": "^4.0.1",
+    "inert": "^4.0.0",
+    "joi": "^8.4.1",
+    "nodemon": "^1.9.2",
+    "uuid": "^2.0.2",
+    "vision": "^4.1.0"
+  }
+}
