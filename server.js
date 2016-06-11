@@ -1,6 +1,8 @@
 const Hapi = require('hapi');
 const Path = require('path');
 const Hoek = require('hoek');
+var ItemStore = require('./lib/itemStore');
+ItemStore.initialize();
 
 
 const server = new Hapi.Server({
