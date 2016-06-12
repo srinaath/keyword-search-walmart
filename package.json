@@ -16,6 +16,7 @@
   "author": "srinaath",
   "license": "ISC",
   "dependencies": {
+    "async": "^2.0.0-rc.6",
     "boom": "^3.2.1",
     "fs": "0.0.2",
     "handlebars": "^4.0.5",
