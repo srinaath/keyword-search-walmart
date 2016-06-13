@@ -18,12 +18,16 @@
   <ul>
     {{#each matchedIds}}
     <li>
-      <p>
-        {{this}}
-      </p>
+        <h4>
+            {{itemId}}
+        </h4>
+        
+        <label> {{{longDescription}}} </label>
+        <hr>
     </li>
     {{/each}}
   </ul>
+  <div><a href="/">Back to Search</a></div>
 </body>
 
 </html>
