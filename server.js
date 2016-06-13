@@ -2,9 +2,8 @@ const Hapi = require('hapi');
 const Path = require('path');
 const Hoek = require('hoek');
 var ItemStore = require('./lib/itemStore');
+
 ItemStore.initialize();
-
-
 const server = new Hapi.Server({
   connections: {
     routes: {
@@ -41,12 +40,12 @@ server.ext('onRequest', function(request, reply) {
   reply.continue();
 });
 
-server.ext('onPreResponse', function(request, reply) {
-  if(request.response.isBoom) {
-    return reply.view('error', request.response);
-  }
-  reply.continue();
-});
+// server.ext('onPreResponse', function(request, reply) {
+//   if(request.response.isBoom) {
+//     return reply.view('error', request.response);
+//   }
+//   reply.continue();
+// });
 
 
 server.route(require('./lib/routes'));

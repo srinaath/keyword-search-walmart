@@ -8,10 +8,12 @@
   display: none;
   background: #FF6347;
   color:#000;
+  font-weight: bold;
 }
 
 .result-ids{
   background: #bcbec0;
+  font-weight: bold;
   color:#000;
 }
 

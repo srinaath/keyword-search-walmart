@@ -1,9 +1,14 @@
-## Walamart api search using hapi
+## Walmart api search using hapi
 
-To install a version of hapi that works for this course, use the following syntax when installing:
+Install a version of hapi:
 ```sh
 npm install hapi@v8.8.1 --save
 ```
+
+Update npm
+npm update 
+```
+
 To run the application use
 nodemon server.js 
 ```
