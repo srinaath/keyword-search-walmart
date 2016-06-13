@@ -4,6 +4,17 @@
   box-sizing: border-box;
 }
 
+.error-text{
+  display: none;
+  background: #FF6347;
+  color:#000;
+}
+
+.result-ids{
+  background: #bcbec0;
+  color:#000;
+}
+
 body {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 14px;

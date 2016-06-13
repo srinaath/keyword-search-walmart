@@ -14,8 +14,10 @@
   <label for="keyword">Enter Keyword to Search</label>
   <input id="keyword-text" name="keyword" type="text">
   <a id="search-btn" class="btn btn-info" role="button">
-			Search
-	</a>
+	Search
+   </a>
+   <pre class="result-ids"></pre>
+   <pre class="error-text"></pre>
   <footer>Created by <a href="https://github.com/srinaath">Srinaath Ravichandran</a></footer>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -23,13 +25,24 @@
 	$('#search-btn').click(
 		function(){
 			var searchUrl="items/search/"+ $('#keyword-text').val()
-			$.get(searchUrl, 
-			function(success) {
-				console.log("Success");  
-			},
-			function(error){
-				console.log("error");  	
-			});
+			$.get(searchUrl).done(function( matchedProducts ) {
+			    if(matchedProducts && matchedProducts.length >0){
+			    	$('.result-ids').show();
+			    	$('.error-text').hide();
+			    	var val="The matched product Ids from the catalog are " + matchedProducts.join();
+			    	$('.result-ids').text(val);
+			    }
+			    else{
+			    	$('.result-ids').hide();
+			    	$('.error-text').show();
+			    	$('.error-text').text("Unfortunately no products were found matching your keyword");
+			    }
+			  })
+			.error(function(error){
+				$('.result-ids').hide();
+				$('.error-text').show();
+				$('.error-text').text("Unfortunately no products were found matching your keyword");
+			}); 
 		});
 </script>
 </html>
