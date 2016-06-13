@@ -5,9 +5,9 @@ Install a version of hapi:
 npm install hapi@v8.8.1 --save
 ```
 
-Update npm
+Install node dependancies
 ```sh
-npm update  
+npm install  
 ```
 
 To run the application use
