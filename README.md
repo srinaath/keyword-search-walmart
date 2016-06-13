@@ -6,7 +6,7 @@ npm install hapi@v8.8.1 --save
 ```
 
 Update npm
-npm update 
+npm update  
 ```
 
 To run the application use
