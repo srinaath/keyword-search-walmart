@@ -2,7 +2,7 @@
 
 Install a version of hapi:
 ```sh
-npm install hapi --save
+npm install hapi -g
 ```
 
 Install node dependancies
