@@ -1,5 +1,6 @@
 {
-	"apiUrl":"http://api.walmartlabs.com/v1/items/",
-	"key":"kjybrqfdgp3u4yv2qzcnjndj",
-	"format":"format=json"
+  "apiUrl": "http://api.walmartlabs.com/v1/items/",
+  "key": "kjybrqfdgp3u4yv2qzcnjndj",
+  "format": "format=json"
 }
+ 
