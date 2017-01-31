@@ -3,7 +3,7 @@ const Path = require('path');
 const Hoek = require('hoek');
 var ItemStore = require('./lib/itemStore');
 
-ItemStore.initialize();
+// ItemStore.initialize();
 const server = new Hapi.Server({
   connections: {
     routes: {
