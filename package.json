@@ -18,20 +18,17 @@
   "dependencies": {
     "async": "^2.0.0-rc.6",
     "async-each-series": "^1.1.0",
-    "bcrypt": "^1.0.2",
     "boom": "^3.2.1",
-    "eslint": "^3.14.1",
     "fs": "0.0.2",
     "handlebars": "^4.0.5",
     "hapi": "^13.4.1",
-    "hapi-auth-cookie": "^6.1.1",
     "hoek": "^4.0.1",
     "inert": "^4.0.0",
     "joi": "^8.4.1",
-    "mysql": "^2.13.0",
-    "nodemon": "^1.11.0",
+    "nodemon": "^1.9.2",
     "request": "^2.72.0",
     "uuid": "^2.0.2",
     "vision": "^4.1.0"
   }
 }
+ 

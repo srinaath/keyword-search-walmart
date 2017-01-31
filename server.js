@@ -2,24 +2,8 @@ const Hapi = require('hapi');
 const Path = require('path');
 const Hoek = require('hoek');
 var ItemStore = require('./lib/itemStore');
-var UserStore = require('./lib/userStore');
-
-// var mysql      = require('mysql');
-// var connection = mysql.createConnection({
-//   host     : 'localhost',
-//   user     : 'root',
-//   password : '',
-//   database : 'es_expensesplitter'
-// });
-// connection.connect();
-// connection.query('SELECT * from es_users', function(err, rows) {
-//   if (err) throw err;
-//   console.log('The current time is: ', rows[0]);
-// });
-
 
 ItemStore.initialize();
-UserStore.initialize();
 const server = new Hapi.Server({
   connections: {
     routes: {
@@ -49,18 +33,6 @@ server.register(require('vision'), (err) => {
 });
 
 server.connection({ port: 3000 });
-
-server.register(require('hapi-auth-cookie'), function(err) {
-	if(err) console.log(err);
-
-	server.auth.strategy('default', 'cookie', {
-		password: 'passwords-to-be-less-than-32',
-		redirectTo: '/login',
-		isSecure: false
-	});
-
-	server.auth.default('default');
-});
 
 
 server.ext('onRequest', function(request, reply) {
