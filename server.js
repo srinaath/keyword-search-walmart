@@ -1,4 +1,5 @@
 const Hapi = require('hapi');
+const Cors = require('hapi-cors');
 const Path = require('path');
 const Hoek = require('hoek');
 var ItemStore = require('./lib/itemStore');
@@ -33,7 +34,13 @@ server.register(require('vision'), (err) => {
 });
 
 server.connection({ port: 3000 });
-
+server.register({
+	register: Cors
+}, function(err){
+	server.start(function(){
+		console.log(server.info.uri);
+	});
+});
 
 server.ext('onRequest', function(request, reply) {
   console.log('Request received' + request.path);
